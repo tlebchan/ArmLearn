@@ -46,6 +46,11 @@ def show_stats(request):
     return render(request, "stats.html", stats)
 
 
+def progress_list(request):
+    progress = progress_work.get_progress_for_table()
+    return render(request, "progress_list.html", context={"progress": progress})
+
+
 def add_progress(request):
     return render(request, "progress_add.html")
 

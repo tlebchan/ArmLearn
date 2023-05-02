@@ -24,5 +24,6 @@ urlpatterns = [
     path('send-term', views.send_term),
     path('stats', views.show_stats),
     path('add-progress', views.add_progress),
-    path('send-progress', views.send_progress)
+    path('send-progress', views.send_progress),
+    path('progress-list', views.progress_list)
 ]
