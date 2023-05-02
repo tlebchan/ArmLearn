@@ -20,19 +20,19 @@ def send_term(request):
     if request.method == "POST":
         cache.clear()
         user_name = request.POST.get("name")
-        new_term = request.POST.get("new_term", "")
-        new_definition = request.POST.get("new_definition", "").replace(";", ",")
+        new_word = request.POST.get("new_word", "")
+        new_translation = request.POST.get("new_translation", "").replace(";", ",")
         context = {"user": user_name}
-        if len(new_definition) == 0:
+        if len(new_translation) == 0:
             context["success"] = False
-            context["comment"] = "Описание должно быть не пустым"
-        elif len(new_term) == 0:
+            context["comment"] = "Перевод должен быть не пустым"
+        elif len(new_word) == 0:
             context["success"] = False
-            context["comment"] = "Термин должен быть не пустым"
+            context["comment"] = "Армянское слово должно быть не пустым"
         else:
             context["success"] = True
-            context["comment"] = "Ваш термин принят"
-            terms_work.write_term(new_term, new_definition)
+            context["comment"] = "Ваше слово принято"
+            terms_work.write_term(new_word, new_translation)
         if context["success"]:
             context["success-title"] = ""
         return render(request, "term_request.html", context)

@@ -9,8 +9,8 @@ def get_terms_for_table():
     return terms
 
 
-def write_term(new_term, new_definition):
-    new_term_line = f"{new_term};{new_definition};user"
+def write_term(new_word, new_translation):
+    new_term_line = f"{new_word};{new_translation};user"
     with open("./data/terms.csv", "r", encoding="utf-8") as f:
         existing_terms = [l.strip("\n") for l in f.readlines()]
         title = existing_terms[0]
@@ -29,8 +29,7 @@ def get_terms_stats():
     with open("./data/terms.csv", "r", encoding="utf-8") as f:
         for line in f.readlines()[1:]:
             term, defin, added_by = line.split(";")
-            words = defin.split()
-            defin_len.append(len(words))
+            defin_len.append(len(defin))
             if "user" in added_by:
                 user_terms += 1
             elif "db" in added_by:

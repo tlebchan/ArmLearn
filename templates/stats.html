@@ -1,18 +1,17 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Статистика по терминам
+Статистика по армянским словам
 {% endblock %}
 
 {% block page-lead %}
-Перед тем, как отрендерить эту страницу, веб-приложение ходит в файл/БД, обновляет статистики, а затем подставляет их в шаблон страницы.
-Всё это можно посмотреть в файле <code>views.py</code>.
+Вы можете изучить статистику по изученным словам.
 {% endblock %}
 
 {% block content %}
 <div class="container px-4 py-5" id="stats">
     <div>
-        <h3 class="py-2">Количество терминов</h3>
+        <h3 class="py-2">Количество армянских слов</h3>
     </div>
     <div class="row text-center">
         <div class="col-md-4">
@@ -29,12 +28,12 @@
         </div>
     </div>
     <div>
-        <h3 class="py-2">Описания</h3>
+        <h3 class="py-2">Переводы</h3>
     </div>
     <div class="row text-center">
         <div class="col-md-4">
             <h4>{{ words_avg }}</h4>
-            <p class="text-muted">слов в среднем</p>
+            <p class="text-muted">символов в среднем</p>
         </div>
         <div class="col-sm-4">
             <h4>{{ words_max }}</h4>
