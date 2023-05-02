@@ -13,47 +13,47 @@
 {% block content %}
 <div class="container px-4 py-5" id="project-contents">
     <h2 class="pb-2 border-bottom">Что есть в этом проекте</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="col d-flex">
+    <div class="row g-10 py-5 row-cols-1 row-cols-lg-2">
+        <div class="col d-flex", style="background-color: red">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Словарь</h3>
-                <p>В словаре можно найти несколько базовых слов для изучения, а также новые слова,
+                <h3 class="fs-2" style="color: white">Словарь</h3>
+                <p style="color: white">В словаре можно найти несколько базовых слов для изучения, а также новые слова,
                     добавленные ваши через форму.</p>
-                <a href="/terms-list" class="btn btn-primary">Посмотреть</a>
+                <a href="/terms-list" class="btn btn-primary" style="background-color: #209f00">Посмотреть</a>
             </div>
-            <div class="col-auto d-none d-lg-block">
-              <img src="https://i.sunhome.ru/journal/131/gora-ararat-v2.orig.jpg" width="150" height="250" style="object-fit: cover">
-            </div>
+<!--            <div class="col-auto d-none d-lg-block">-->
+<!--              <img src="https://i.sunhome.ru/journal/131/gora-ararat-v2.orig.jpg" width="150" height="250" style="object-fit: cover">-->
+<!--            </div>-->
         </div>
-        <div class="col d-flex">
+        <div class="col d-flex p-1", style="background-color: blue">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Форма для добавления новых слов</h3>
-                <p>Через эту web-форму вы можете добавить новые армянские слова для изучения.</p>
-                <a href="/add-term" class="btn btn-primary">
+                <h3 class="fs-2" style="color: white">Форма для добавления новых слов</h3>
+                <p style="color: white">Через эту web-форму вы можете добавить новые армянские слова для изучения.</p>
+                <a href="/add-term" class="btn btn-primary" style="background-color: #209f00">
                     Заполнить
                 </a>
             </div>
         </div>
-        <div class="col d-flex">
+        <div class="col d-flex", style="background-color: orange">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Статистика</h3>
-                <p>Сколько слов уже есть? Какой они длины? Всю эту информацию можно посмотреть на этой странице.</p>
-                <a href="/stats" class="btn btn-primary">
+                <h3 class="fs-2" style="color: white">Статистика</h3>
+                <p style="color: white">Сколько слов уже есть? Какой они длины? Всю эту информацию можно посмотреть на этой странице.</p>
+                <a href="/stats" class="btn btn-primary" style="background-color: #209f00">
                     Изучить
                 </a>
             </div>
